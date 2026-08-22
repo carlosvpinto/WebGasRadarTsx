@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <rect width="24" height="24" rx="6" fill="#0f172a" />
+  <rect x="1" y="1" width="22" height="22" rx="5" stroke="#2563eb" stroke-width="1.5" stroke-opacity="0.4" />
+  <!-- Gas pump nozzle & tank -->
+  <path d="M4 19V5C4 3.89543 4.89543 3 6 3H12C13.1046 3 14 3.89543 14 5V19C14 20.1046 13.1046 21 12 21H6C4.89543 21 4 20.1046 4 19Z" fill="#ef4444" />
+  <!-- Gas pump window / screen -->
+  <rect x="6.5" y="5.5" width="5" height="4" rx="1" fill="#ffffff" />
+  <!-- Fuel drop in screen -->
+  <path d="M9 6.5C8.4 7.2 8 7.7 8 8.3C8 8.9 8.4 9.3 9 9.3C9.6 9.3 10 8.9 10 8.3C10 7.7 9.6 7.2 9 6.5Z" fill="#ef4444" />
+  <!-- Hose & nozzle -->
+  <path d="M14 8H16C17.1046 8 18 8.89543 18 10V16C18 17.1046 18.8954 18 20 18C20.5523 18 21 17.5523 21 17V12L19 9" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

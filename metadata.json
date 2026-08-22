@@ -1,0 +1,7 @@
+{
+  "name": "GasRadar",
+  "description": "Encuentra la gasolina más barata al instante con mapa en tiempo real, radar de precios y calculadora de ahorro.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

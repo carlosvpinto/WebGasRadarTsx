@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#FFD100" />
+  <!-- Shell scallop shape -->
+  <path d="M50 18C32 18 20 32 20 48C20 66 36 78 42 82H58C64 78 80 66 80 48C80 32 68 18 50 18Z" fill="#ED1C24" />
+  <path d="M50 24C36 24 26 36 26 50C26 64 40 74 44 77H56C60 74 74 64 74 50C74 36 64 24 50 24Z" fill="#FFD100" />
+  <!-- Ridges -->
+  <path d="M50 24V77M40 30L44 77M60 30L56 77M32 40L45 77M68 40L55 77" stroke="#ED1C24" stroke-width="3" stroke-linecap="round" />
+</svg>

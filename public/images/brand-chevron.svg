@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#005ea6" />
+  <!-- Chevron top ribbon (blue) -->
+  <path d="M50 20L80 40L50 60L20 40L50 20Z" fill="#009bd9" />
+  <!-- Chevron bottom ribbon (red) -->
+  <path d="M50 45L80 65L50 85L20 65L50 45Z" fill="#d9272e" />
+</svg>

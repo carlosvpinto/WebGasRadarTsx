@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          if (typeof window !== 'undefined') {
+            const origFetch = window.fetch;
+            let currentFetch = origFetch ? origFetch.bind(window) : undefined;
+            try {
+              Object.defineProperty(window, 'fetch', {
+                get: function() {
+                  return currentFetch;
+                },
+                set: function(val) {
+                  currentFetch = val;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            } catch (e) {
+              // Ignore if already configurable or non-redefinable
+            }
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>GasRadar — Encuentra la gasolina más barata al instante</title>
+    <meta name="description" content="Ahorra en cada carga con precios en tiempo real y navegación directa. GasRadar analiza miles de estaciones para ofrecerte la mejor opción." />
+    <meta property="og:title" content="GasRadar — Encuentra la gasolina más barata al instante" />
+    <meta property="og:description" content="Ahorra en cada carga con precios en tiempo real y navegación directa. GasRadar analiza miles de estaciones para ofrecerte la mejor opción." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#051424] text-[#d4e4fa] font-['Inter',sans-serif] selection:bg-blue-600 selection:text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
