@@ -119,7 +119,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="flex items-center gap-2">
                 <TrendingDown className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="text-xs text-slate-300">
-                  Ahorro medio: <strong className="text-emerald-400 font-mono">0.22€/L</strong>
+                  Ahorro medio: <strong className="text-emerald-400 font-mono">$0.25/gal</strong>
                 </span>
               </div>
               <div className="flex items-center gap-2">

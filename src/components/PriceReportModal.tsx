@@ -113,9 +113,9 @@ export const PriceReportModal: React.FC<PriceReportModalProps> = ({
 
             {/* Price input */}
             <div>
-              <label className="block text-xs font-semibold text-slate-400 uppercase mb-2">
-                Precio Observado ($ / gal o € / L)
-              </label>
+             <label className="block text-xs font-semibold text-slate-400 uppercase mb-2">
+              Precio Observado ($ / gal)
+            </label>
               <div className="relative">
                 <input
                   type="number"

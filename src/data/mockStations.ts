@@ -191,16 +191,15 @@ export const FEATURES_DATA: FeatureItem[] = [
     highlight: 'Rentabilidad real',
   },
 ];
-
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 'test-1',
     author: 'Carlos R.',
     role: 'Conductor habitual en Madrid',
     rating: 5,
-    comment: '¡Increíble! He ahorrado casi 20 euros este mes solo eligiendo la gasolinera correcta en mi ruta diaria.',
+    comment: '¡Increíble! He ahorrado casi $25 dólares este mes solo eligiendo la gasolinera correcta en mi ruta diaria.',
     avatar: '/images/avatar-carlos.svg',
-    savedAmount: '~240€ / año',
+    savedAmount: '~$240 / año',
     location: 'Ruta diaria al trabajo',
   },
   {
@@ -210,7 +209,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     rating: 5,
     comment: 'La interfaz es super limpia y los precios siempre están actualizados. Indispensable para viajar.',
     avatar: '/images/avatar-elena.svg',
-    savedAmount: '~380€ / año',
+    savedAmount: '~$380 / año',
     location: 'Viajes de larga distancia',
   },
   {
@@ -220,7 +219,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     rating: 5,
     comment: 'Me encanta el mapa interactivo. Ya no pierdo tiempo buscando, voy directo a lo más barato.',
     avatar: '/images/avatar-javier.svg',
-    savedAmount: '~520€ / año',
+    savedAmount: '~$520 / año',
     location: 'Uso profesional intensivo',
   },
 ];

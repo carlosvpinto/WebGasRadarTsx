@@ -2,8 +2,8 @@ export type FuelType = 'regular' | 'premium' | 'diesel' | 'glp';
 
 export interface StationPrice {
   fuelType: FuelType;
-  price: number; // e.g., 5.19 or 1.45€
-  unit: string; // '$' or '€'
+  price: number; // e.g., 5.19
+  unit: string; // '$'
   updatedAgo: string;
   isLowest?: boolean;
 }

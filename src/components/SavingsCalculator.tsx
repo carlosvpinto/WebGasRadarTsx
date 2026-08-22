@@ -4,24 +4,23 @@ import { Calculator, Sparkles, TrendingDown, ArrowRight, ShieldCheck, Gauge, Che
 
 export const SavingsCalculator: React.FC = () => {
   const [fuelType, setFuelType] = useState<FuelType>('regular');
-  const [tankSize, setTankSize] = useState<number>(50); // Liters
-  const [refillsPerMonth, setRefillsPerMonth] = useState<number>(3); // times
-  const [currency, setCurrency] = useState<'EUR' | 'USD'>('EUR');
+const [tankSize, setTankSize] = useState<number>(50); // Liters
+const [refillsPerMonth, setRefillsPerMonth] = useState<number>(3); // times
+const [currency, setCurrency] = useState<'USD' | 'EUR'>('USD');
 
-  // Baseline price diff per liter based on fuel type
-  const priceDiffPerLiter: Record<FuelType, number> = {
-    regular: 0.18, // 18 cents difference between expensive and cheapest station
-    premium: 0.24,
-    diesel: 0.19,
-    glp: 0.12,
-  };
+const priceDiffPerLiter: Record<FuelType, number> = {
+  regular: 0.25,
+  premium: 0.35,
+  diesel: 0.28,
+  glp: 0.18,
+};
 
-  const currentDiff = priceDiffPerLiter[fuelType];
-  const savingsPerTank = tankSize * currentDiff;
-  const monthlySavings = savingsPerTank * refillsPerMonth;
-  const annualSavings = monthlySavings * 12;
+const currentDiff = priceDiffPerLiter[fuelType];
+const savingsPerTank = (tankSize / 3.785) * currentDiff * 3.785;
+const monthlySavings = (tankSize * currentDiff * refillsPerMonth) / 3.785;
+const annualSavings = monthlySavings * 12;
 
-  const symbol = currency === 'EUR' ? '€' : '$';
+const symbol = '$';
 
   return (
     <section
@@ -143,19 +142,19 @@ export const SavingsCalculator: React.FC = () => {
                   <span className="text-xs font-semibold text-slate-400 uppercase">
                     Ahorro Estimado
                   </span>
-                  <span className="inline-flex items-center gap-1 text-[11px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                    <TrendingDown className="w-3 h-3" />
-                    -{(currentDiff * 100).toFixed(0)} céntimos/L
-                  </span>
+                 <span className="inline-flex items-center gap-1 text-[11px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                  <TrendingDown className="w-3 h-3" />
+                  -{(currentDiff * 100).toFixed(0)} centavos/gal
+                </span>
                 </div>
 
                 {/* Big number hero: Monthly */}
                 <div className="mb-4">
                   <span className="text-xs text-slate-400">Por mes:</span>
-                  <div className="text-4xl font-extrabold text-white font-['Hanken_Grotesk'] tracking-tight">
-                    {monthlySavings.toFixed(2)}{symbol}{' '}
-                    <span className="text-sm font-normal text-slate-400">/ mes</span>
-                  </div>
+                <div className="text-4xl font-extrabold text-white font-['Hanken_Grotesk'] tracking-tight">
+                  {symbol}{monthlySavings.toFixed(2)}{' '}
+                  <span className="text-sm font-normal text-slate-400">/ mes</span>
+                </div>
                 </div>
 
                 {/* Annual projection */}
@@ -163,8 +162,8 @@ export const SavingsCalculator: React.FC = () => {
                   <div className="text-xs text-blue-300 font-medium mb-1">
                     Ahorro acumulado al año:
                   </div>
-                  <div className="text-2xl font-bold text-emerald-400 font-mono">
-                    ~{annualSavings.toFixed(0)}{symbol} al año
+                 <div className="text-2xl font-bold text-emerald-400 font-mono">
+                    ~{symbol}{annualSavings.toFixed(0)} al año
                   </div>
                   <p className="text-[11px] text-slate-400 mt-1 leading-snug">
                     Suficiente para pagar tu seguro, mantenimiento o varias cenas.
