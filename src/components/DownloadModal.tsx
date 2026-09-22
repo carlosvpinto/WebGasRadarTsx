@@ -95,9 +95,10 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose })
             <span>App Store</span>
           </a>
 
+          {/* ESTE ES EL ENLACE QUE SE MODIFICÓ */}
           <a
             id="modal-google-play-link"
-            href="https://play.google.com"
+            href="https://play.google.com/store/apps/details?id=com.carlosvpinto.gasolinaapp"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-sm font-semibold transition-all hover:border-slate-500 text-white"
